@@ -1,0 +1,12 @@
+package main
+
+import (
+	"fmt"
+	"os"
+)
+
+func main() {
+	f, _ := os.Create("hello.txt")
+	defer f.Close()
+	fmt.Fprintln(f, "hello world")
+}
